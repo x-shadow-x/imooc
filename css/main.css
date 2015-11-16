@@ -1,0 +1,396 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.top {
+    width: 100%;
+    height: 27px;
+    background: url("../images/top_bg.jpg") repeat-x;
+}
+
+.top_content {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.top_content ul {
+    float: right;
+}
+
+.top_content li {
+    list-style-image: url("../images/li_bg.gif");
+    float: left;
+    width: 70px;
+    line-height: 27px;
+}
+.top_content a:link,.top_content a:visited {/*设置超链接初始状态和访问过后的样式*/
+    color: #8e8e8e;
+    text-decoration: none;
+}
+.top_content a:active,.top_content a:hover {/*设置超链接初始状态和访问过后的样式*/
+    color: #900;
+    text-decoration: none;
+}
+
+.wrap {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.logo {
+    /*height: 80px;*/
+    background-color: #fff;
+    /*原来当高度设为80px时需要在logo盒子后加一个div专门用以清除浮动~
+    否则logo后面的同级盒子nav中的内容会因为logo盒子中的浮动元素影响而显示错乱
+    当然~如果想不添加清除浮动的div则可以手动把上面注释起来的80px的高度设的再大一些
+    这里采用另一种方式~通过设置overfloat为hidden来使logo盒子的高度自动被子元素撑开
+    即保证logo能完全包住里面的浮动元素~这样下面的nav盒子就不会受影响~也无需清除浮动*/
+    overflow: hidden;
+}
+
+.logo_left {
+    width: 200px;
+    float: left;
+}
+
+.logo_right {
+    width: 300px;
+    float: right;
+    height:28px;
+    margin-top: 30px;
+    color: #8e8e8e;
+}
+
+.logo_right img {/*这样图片后面的文字就可以在图片高度的中间显示*/
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.tel {
+    font-family: "微软雅黑", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #c00;
+    font-weight: 900;
+}
+
+.nav {
+    height: 40px;
+    line-height: 40px;
+}
+
+.nav_left {
+    width: 10px;
+    background: url("../images/nav_left.jpg") no-repeat;
+}
+.nav_middle {
+    width: 980px;
+    background: url("../images/nav_bg.jpg") repeat-x;
+}
+.nav_right {
+    width: 10px;
+    background: url("../images/nav_right.jpg") no-repeat;
+}
+
+.nav_left, .nav_middle, .nav_right {
+    float: left;
+    height: 40px;
+}
+
+.nav_middle_left, .nav_middle_right {
+    float: left;
+}
+
+.nav_middle_left {
+    width: 680px;
+}
+
+.nav_middle_left li {
+    float: left;
+    list-style-type: none;/*这句可以写在ul上~也可以写在li上*/
+    width: 100px;
+    text-align: center;/*设置文字在li的水平方向上的正中间*/
+    /*line-height: 40px;因为父元素nav已经设置了行高为40~所以其内容都会居中~故这里可以不再设置行高*/
+}
+
+.nav_middle_left a:link, .nav_middle_left a:visited {
+    color: #fff;
+}
+
+.nav_middle_left a:hover, .nav_middle_left a:active {
+    color: #ff0;
+}
+
+.nav_middle_left a:link, .nav_middle_left a:visited,
+.nav_middle_left a:hover, .nav_middle_left a:active {
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "微软雅黑", Arial, Helvetica, sans-serif;
+}
+
+.nav_middle_right {
+    width: 300px;
+}
+
+.search_text {
+    width: 190px;
+    height: 25px;
+    background: #fff url("../images/search.jpg") no-repeat right center;
+    padding-right: 26px;
+    border: 1px solid #fff;
+}
+
+.ad {
+    height: 310px;
+    overflow: hidden;
+}
+
+.main {
+    height: 250px;
+    background: #fff;
+    margin-top: 5px;
+}
+.news {
+    width: 340px;
+    border: 1px solid #e8e8e8;
+}
+.title {
+    height: 35px;
+    border-bottom: 2px solid #e8e8e8;
+}
+.title_left {
+    width: 70%;
+    float: left;
+    font-family: "微软雅黑", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #786f66;
+    line-height: 35px;
+    margin-left: 20px;
+}
+
+.title_right {
+    width: 20%;
+    float: right;
+    line-height: 35px;
+    text-align: right;/*为了让内容展示去三个模块的title中more文字靠右显示*/
+    padding-right: 5px;
+}
+.title_right a {
+    text-decoration: none;
+    color: #999999;
+}
+
+.course {
+    width: 410px;
+    border: 1px solid #e8e8e8;
+    margin: 0 7px;
+}
+.sidebar {
+    width: 230px;
+}
+.news, .course, .sidebar {
+    float: left;
+    height: 100%;
+}
+.pic_news {
+    height: 80px;
+    margin-top: 10px;
+    line-height: 22px;/*设置其子元素文字内容的行高*/
+}
+.pic_news img, .pic_course img {
+    float: left;
+    margin: 0 5px;
+}
+.pic_news a, .pic_course a {
+    color: #c00;
+    text-decoration: none;
+}
+.news_list {
+    margin-top: 20px;
+}
+.news_list li {
+    list-style-type: none;
+    background: url("../images/list.jpg") no-repeat;
+    padding-left: 10px;
+    margin: 8px 8px;
+    border-bottom: 1px dotted #ccc;
+}
+.news_list a:link, .news_list a:visited {
+    text-decoration: none;
+    color: #000;
+}
+.news_list a:hover, .news_list a:active {
+    text-decoration: none;
+    color: #c00;
+}
+.news_list span {
+    color: #999;
+    float: right;
+}
+.pic_course {
+    height: 120px;
+    margin-top: 10px;
+    line-height: 22px;
+}
+.course_type {
+    height: 37px;
+    width: 372px;
+    background: url("../images/product_type_bg.jpg") no-repeat;
+    margin: 20px auto;
+}
+.course_type li {
+    list-style-type: none;
+    float: left;
+    line-height: 37px;
+    margin: 0 15px;
+}
+
+.video {
+    height: 185px;
+    border: 1px solid #e8e8e8;
+}
+
+.video_content {
+    height: 150px;
+    text-align: center;
+}
+
+.sidebar_ad {
+    height: 55px;
+    border: 1px solid #e8e8e8;
+    margin-top: 10px;
+}
+
+.copyright {
+    width: 100%;
+    height: 200px;
+    background-color: #e8e8e8;
+    margin-top: 10px;
+}
+.copyright_content {
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+.copyright_content li {
+    list-style-type: none;
+    float: left;
+    width: 200px;
+    background: url("../images/line.png") no-repeat right center;
+    text-align: center;
+    line-height: 30px;
+    font-family: "微软雅黑", Arial, Helvetica, sans-serif;
+}
+.copyright_content a {
+    text-decoration: none;
+    color: #999;
+    font-size: 18px;
+}
+.copyright_content li ul li a {
+    font-size: 14px;
+}
+.list_main {
+    overflow: hidden;/*因为新闻内容长度不定~故此元素内部的子元素高度需要自适应~又因其子元素都浮动~为了让此父元素告诉能被子元素动态撑大~需要设置overfloat为hidden~这样紧邻于此父元素的下一个同级元素copyright就会被顶下去而无需设置清除浮动*/
+    background-color: #fff;
+    margin-top: 10px;
+}
+.news_type {
+    width: 220px;
+    height: 350px;
+    border: 1px solid #e8e8e8;
+    float: left;
+}
+.news_type h2 {
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    font-family: "微软雅黑", Arial, Helvetica, sans-serif;
+    color: #666;
+    background: url("../images/titile_bg.gif") repeat-x;
+    padding-left: 10px;
+}
+.list_box {
+    width: 770px;
+    min-height: 350px/*这个容器需要放置新闻~为了让高度随新闻内容增多而扩大~就不能写死一个高度~*/;
+    _height: 350px;/*ie6不支持min-height属性~这里利用css hack专门给ie6定高~而ie6有个特性即盒子放不下内容时盒子会被自动撑大*/
+    border: 1px solid #e8e8e8;
+    float: right;
+}
+.news_type_content {
+    height: 365px;
+    background: url("../images/content_bg.gif") repeat-x;
+}
+
+.news_type_content li {
+    list-style-type: none;
+    height: 30px;
+    line-height: 30px;
+
+}
+
+.news_type_content li a {
+    display: block;
+    color: #666;
+    text-decoration: none;
+    background: url("../images/li_bg.gif") no-repeat left center;
+    padding-left: 15px;
+}
+.news_type_content li a:hover {
+    color: #009cdf;
+    background: #f2f2f2 url("../images/li_bg2.gif") no-repeat left center;
+}
+
+.list_box h2 {
+    font-size: 14px;
+    font-family: "微软雅黑", Arial, Helvetica, sans-serif;
+    color: #666;
+    height: 35px;
+    line-height: 35px;
+    background: url("../images/type_bg.png") repeat-x;
+    padding-left: 20px;
+}
+.pages {
+    height: 40px;
+    margin-top: 10px;
+    text-align: center;
+}
+.pages a {
+    display: inline-block;/*为了防止在某些浏览器下a的高度变小的问题~因为a原本是行内元素*/
+    border: 1px solid #e8e8e8;
+    text-decoration: none;
+    margin: 5px;
+    padding: 5px 10px;
+}
+.pages a:link, .pages a:visited {
+    color: #000;
+
+}
+
+.pages a:hover, .pages a:active {
+    color: #fff;
+    background-color: #cc1b1b;
+}
+.list_box h1 {
+    font-size: 20px;
+    margin: 10px 0;
+    font-family: "微软雅黑", Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.list_box_newInfo {
+    color: #666;
+    text-align: center;
+    border-bottom: 1px dotted #666;
+}
+.list_box_newsContent {
+    font-size: 14px;
+    padding: 20px;
+    line-height: 25px;
+    text-indent: 2em;/*设置文本的缩进*/
+    /*text-indent属性是用于设置将段落的第一行缩进*/
+}
